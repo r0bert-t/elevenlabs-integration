@@ -20,7 +20,7 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 1. **Trigger:** The user asks a question requiring use of knowledge database
 2. **Webhook execution:** ElevenLabs interrupts or supplements its core prompt by calling the configured HTTP POST webhook tool
 3. **Retrieval (RAG):** The local server embeds the query, searches the vector database, filters context, and optimizes the payload via a local LLM
-4. **Delivery:** The structured text answer is stream back (in chunks) instantly to ElevenLabs agent to be spoken to the user
+4. **Delivery:** The structured text answer is stream back in chunks to ElevenLabs agent to be spoken to the user
 
 
 ## Setup
@@ -28,7 +28,7 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 ### 1. Set up local server webhook endpoint
 Your local server must expose a public-facing webhook endpoint (or use a tunneling service like Ngrok for a local development) to accept incoming POST requests from ElevenLabs agent.
 
-* **Endpoint URL:** `https://localserver.com/v1/chat/completions`
+* **Endpoint URL:** `https://localserver/v1/chat/completions`
 * **Method:** `POST`
 * **Expected Request Payload Structure (from ElevenLabs):**
   ```json
@@ -53,7 +53,7 @@ I this example we are using **/v1/chat/completions** endpoint which is the stand
 3. Fill out the tool configuration parameters:
    * **Name:** `query_local_knowledge_db`
    * **Description:** Use a highly descriptive prompt so the agent knows when to invoke it. *Example:* "Call this tool when the user asks specific, technical, or internal operational questions that require the local knowledge database context."
-   * **URL:** Your local server's public endpoint (e.g., `https://localserver.com/v1/chat/completions`).
+   * **URL:** Your local server's public endpoint (e.g., `https://localserver/v1/chat/completions`).
    * **Method:** `POST`
    * Set proper **Response timeout** (seconds)
    * Configure Authentication & Security (TBU)
