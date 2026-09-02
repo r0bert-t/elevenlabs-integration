@@ -1,6 +1,6 @@
-# Conversational AI agent using external knowledge database (use of webhook tool example)
+# Conversational AI agent using external knowledge RAG database
 
- This example shows how ElevenLabs Conversational AI agent can be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and knowledge database. By leveraging the ElevenLabs Webhook tool, the voice agent can dynamically query a local knowledge database during a live conversation, allowing it to provide accurate, context-aware, and data-driven spoken responses.
+ This example shows how ElevenLabs Conversational AI agent can be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and knowledge database. By leveraging the [ElevenLabs Webhook tool](https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools), the voice agent can dynamically query a local knowledge database during a live conversation, allowing it to provide accurate, context-aware, and data-driven spoken responses.
 
 ![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/elevenlabs-webhook-tool.png)
 
