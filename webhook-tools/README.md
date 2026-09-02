@@ -1,10 +1,10 @@
-# Conversational AI agent using external knowledge database in local RAG (use of webhook tool example)
+# Conversational AI agent using external knowledge database (use of webhook tool example)
 
  This example shows how ElevenLabs Conversational AI agent can be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and knowledge database. By leveraging the ElevenLabs Webhook tool, the voice agent can dynamically query a local knowledge database during a live conversation, allowing it to provide accurate, context-aware, and data-driven spoken responses.
 
 ![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/elevenlabs-webhook-tool.png)
 
-## Workflow and logic
+## Logic
 
 When a user asks a question requiring a specific knowledge, the ElevenLabs agent triggers a custom webhook tool. The local server processes the query using a local LLM, searches the vector database, extracts the relevant context, and returns it to the agent instantly to form a natural voice response.
 
@@ -14,8 +14,10 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 [Natural Response] <── [ElevenLabs Agent] <── (JSON Response) ───────┴── [Local LLM + Vector DB]
 ```
 
+## Workflow
+
 1. **Trigger:** The user asks a question requiring use of knowledge database
-2. **Execution:** ElevenLabs interrupts or supplements its core prompt by calling the configured HTTP POST Webhook tool
+2. **Webhook execution:** ElevenLabs interrupts or supplements its core prompt by calling the configured HTTP POST webhook tool
 3. **Retrieval (RAG):** The local server embeds the query, searches the vector database, filters context, and optimizes the payload via a local LLM
 4. **Delivery:** The structured text answer is stream back (in chunks) instantly to ElevenLabs agent to be spoken to the user
 
@@ -25,7 +27,7 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 ### 1. Set up local server webhook endpoint
 Your local server must expose a public-facing URL (or use a tunneling service like Ngrok for a local development) to accept incoming POST requests from ElevenLabs agent.
 
-* **Endpoint URL:** `https://localserver.com`
+* **Endpoint URL:** `https://localserver.com/v1/chat/completions`
 * **Method:** `POST`
 * **Expected Request Payload Structure (from ElevenLabs):**
   ```json
@@ -45,7 +47,7 @@ I this example we are using **/v1/chat/completions** endpoint is the standard te
 
 
 ### 2. Configure custom tool in ElevenLabs platform
-1. Navigate to the [ElevenLabs Dashboard](https://elevenlabs.io) and open your **ElevenAgents**
+1. Navigate to the [ElevenLabs](https://elevenlabs.io) and open **ElevenAgents** dashboard
 2. Go to the **Tools** tab and click **Add webhook tool**
 3. Fill out the tool configuration parameters:
    * **Name:** `query_local_knowledge_db`
