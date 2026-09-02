@@ -1,8 +1,9 @@
-# Conversational AI agent using external knowledge RAG database
+# Conversational AI agent using external knowledge database
 
  This example shows how ElevenLabs Conversational AI agent can be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and knowledge database. By leveraging the [ElevenLabs Webhook tool](https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools), the voice agent can dynamically query a local knowledge database during a live conversation, allowing it to provide accurate, context-aware, and data-driven spoken responses.
-
-![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/elevenlabs-webhook-tool.png)
+  
+  
+![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/elevenlabs-webhook-tool_v2.png)
 
 ## Logic
 
@@ -25,7 +26,7 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 ## Setup
 
 ### 1. Set up local server webhook endpoint
-Your local server must expose a public-facing URL (or use a tunneling service like Ngrok for a local development) to accept incoming POST requests from ElevenLabs agent.
+Your local server must expose a public-facing webhook endpoint (or use a tunneling service like Ngrok for a local development) to accept incoming POST requests from ElevenLabs agent.
 
 * **Endpoint URL:** `https://localserver.com/v1/chat/completions`
 * **Method:** `POST`
@@ -43,7 +44,7 @@ Your local server must expose a public-facing URL (or use a tunneling service li
   ```
 
 #### Endpoint format
-I this example we are using **/v1/chat/completions** endpoint is the standard technical protocol to generate text responses in a conversational format. Originally introduced by OpenAI for ChatGPT. ElevenLabs consumes this API format to let developers connect external AI agents (like OpenAI, DeepSeek) directly into ElevenLabs Conversational AI voice agents
+I this example we are using **/v1/chat/completions** endpoint which is the standard technical protocol to generate text responses in a conversational format. Originally introduced by OpenAI for ChatGPT. ElevenLabs consumes this API format to let developers connect external AI agents (like OpenAI, DeepSeek) directly into ElevenLabs Conversational AI voice agents
 
 
 ### 2. Configure custom tool in ElevenLabs platform
@@ -51,7 +52,7 @@ I this example we are using **/v1/chat/completions** endpoint is the standard te
 2. Go to the **Tools** tab and click **Add webhook tool**
 3. Fill out the tool configuration parameters:
    * **Name:** `query_local_knowledge_db`
-   * **Description:** Use a highly descriptive prompt so the agent knows when to invoke it. *Example:* "Call this webhook tool when the user asks specific, technical, or internal operational questions about company systems, protocols, or documentation that require the local database context."
+   * **Description:** Use a highly descriptive prompt so the agent knows when to invoke it. *Example:* "Call this tool when the user asks specific, technical, or internal operational questions that require the local knowledge database context."
    * **URL:** Your local server's public endpoint (e.g., `https://localserver.com/v1/chat/completions`).
    * **Method:** `POST`
    * Set proper **Response timeout** (seconds)
