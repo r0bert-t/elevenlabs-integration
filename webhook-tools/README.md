@@ -115,3 +115,8 @@ This component manages the persistence, indexing, and contextual search of the d
 3. **LLM Orchestration**
 
 This component manages prompt handling and processing queries.
+
+
+---
+
+Created by [Robert Tracz](https://www.linkedin.com/in/robert-tracz/) 
