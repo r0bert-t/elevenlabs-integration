@@ -101,3 +101,17 @@ I this example we are using **/v1/chat/completions** endpoint which is the stand
       "value_type": "llm_prompt"
     },
 ```
+
+## Architecture Components
+
+1. **API Routing**
+
+Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization between the external agents and internal knowledge database.
+
+2. **Knowledge Retrieval & Vector database**
+
+This component manages the persistence, indexing, and contextual search of the documentation.
+
+3. **LLM Orchestration**
+
+This component manages prompt handling and processing queries.
