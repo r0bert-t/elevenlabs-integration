@@ -60,10 +60,9 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
      * Add custom header with following values:
        * **name:** elevenlabs-secret
        * **type:** secret
-       * **value:** select **WEBHOOK_SECRET**
-         * You can configure secret in ElevenLabs by navigating to workspace configuration and settings.
+       * **value:** select **WEBHOOK_SECRET** (You can configure secret in ElevenLabs by navigating to workspace configuration and settings)
      
-    > Please note that in this example we are using a very simple authentication using non-encrypted secret. In production deployment it is recommended to use more secure solutions. For more details please check [webhook-tool supported authentication methods](https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools#supported-authentication-methods)
+      > Please note that in this example we are using a very simple authentication using a non-encrypted secret passed in HTTP header. In production deployment it is recommended to use more secure solutions. For more details please check [webhook-tool supported authentication methods](https://elevenlabs.io/docs/eleven-agents/customization/tools/webhook-tools#supported-authentication-methods)
 
    * Configure **Body parameters**. Below you can find a **api_schema** that will allow to use **/v1/chat/completions** webhook format endpoint
 
