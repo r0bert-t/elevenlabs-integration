@@ -111,15 +111,15 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
 
 ## Architecture components
 
-1. **API Routing**
+1. **API routing**
 
-Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization (between the external agents and internal knowledge database).
+Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization (between the Elevenlabs conversational agent and internal knowledge database).
 
-2. **Knowledge Retrieval & Vector database**
+2. **Knowledge retrieval & vector database**
 
 This component manages the persistence, indexing, and contextual search of the documentation.
 
-3. **LLM Orchestration**
+3. **LLM orchestration**
 
 This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
 
