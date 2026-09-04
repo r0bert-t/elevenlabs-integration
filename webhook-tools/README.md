@@ -30,21 +30,21 @@ Your local server must expose a public-facing webhook endpoint (or use a tunneli
 
 * **Endpoint URL:** `https://localserver/v1/chat/completions`
 * **Method:** `POST`
-* **Expected Request Payload Structure (from ElevenLabs):**
+* **Expected Request payload structure (from ElevenLabs):**
   ```json
   {
     "content": "Sample question"
   }
   ```
-* **Expected Response Payload Structure (to ElevenLabs):**
+* **Expected Response payload structure (to ElevenLabs):**
   ```json
   {
     "context": "Sample response"
   }
   ```
 
-#### Endpoint format
-I this example we are using **/v1/chat/completions** endpoint which is the standard technical protocol to generate text responses in a conversational format. Originally introduced by OpenAI for ChatGPT. ElevenLabs consumes this API format to let developers connect external AI agents (like OpenAI, DeepSeek) directly into ElevenLabs Conversational AI voice agents
+#### API endpoint format
+I this example we are using **/v1/chat/completions** endpoint format which is the standard technical protocol to generate text responses in a conversational format. Originally introduced by OpenAI for ChatGPT. ElevenLabs can use this API format to connect external AI agents (like OpenAI, DeepSeek, local RAGs) directly into ElevenLabs Conversational AI voice agents.
 
 
 ### 2. Configure custom tool in ElevenLabs platform
@@ -61,7 +61,7 @@ I this example we are using **/v1/chat/completions** endpoint which is the stand
        * **name:** elevenlabs-secret
        * **type:** secret
        * **value:** select WEBHOOK_SECRET
-         * You can configure workspace secrets in ElevenLabs by navigating to your agent settings or workspace configuration and adding the secret key value
+         * You can configure secrets in ElevenLabs by navigating to workspace configuration and settings.
    * Configure **Body parameters**. Below you can find a **api_schema** that will allow to use **/v1/chat/completions** webhook endpoint
 
 
@@ -109,11 +109,11 @@ I this example we are using **/v1/chat/completions** endpoint which is the stand
     },
 ```
 
-## Architecture Components
+## Architecture components
 
 1. **API Routing**
 
-Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization between the external agents and internal knowledge database.
+Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization (between the external agents and internal knowledge database).
 
 2. **Knowledge Retrieval & Vector database**
 
@@ -121,7 +121,7 @@ This component manages the persistence, indexing, and contextual search of the d
 
 3. **LLM Orchestration**
 
-This component manages prompt handling and processing queries.
+This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
 
 
 ---
