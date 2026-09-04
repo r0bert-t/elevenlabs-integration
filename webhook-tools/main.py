@@ -1,5 +1,5 @@
 """
-Allows to ElevenLabs Conversational AI agent to be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and query knowledge database
+Allows ElevenLabs Conversational AI agent to be integrated with a Local Retrieval-Augmented Generation (RAG) pipeline and query knowledge database
 """
 
 import json
