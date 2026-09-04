@@ -111,6 +111,32 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
     },
 ```
 
+### 3. Configure custom tool in ElevenLabs platform
+1. Install Ollama and required LLM models
+
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Install Llama3.2 LLM model
+ollama pull llama3.2:3b
+
+# Install nomic-embed-text model
+ollama pull nomic-embed-text
+```
+
+2. Create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+3. Run code
+
+```bash
+python main.py
+```
+
 ## Architecture components
 
 **1. API routing**
