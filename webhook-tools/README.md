@@ -111,8 +111,8 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
     },
 ```
 
-### 3. Configure custom tool in ElevenLabs platform
-1. Install Ollama and required LLM models
+### 3. Configure and run your local server
+1. Install Ollama and LLM models
 
 ```bash
 # Install Ollama
