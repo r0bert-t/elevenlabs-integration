@@ -52,17 +52,17 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
 2. Go to the **Tools** tab and click **Add webhook tool**
 3. Fill out the tool configuration parameters:
    * **Name:** `query_local_knowledge_db`
-   * **Description:** Use a highly descriptive prompt so the agent knows when to invoke it. *Example:* "Call this tool when the user asks specific, technical, or internal operational questions that require the local knowledge database context."
+   * **Description:** Use a highly descriptive prompt so the agent knows when to invoke it. *Example: "Call this tool when the user asks specific, technical or internal operational questions that require the local knowledge database context."*
    * **URL:** Your local server's public endpoint (e.g., `https://localserver/v1/chat/completions`).
    * **Method:** `POST`
-   * Set proper **Response timeout** (seconds)
+   * Set proper **Response timeout** (in seconds)
    * Configure Authentication:
-     * Add header with following values:
+     * Add custom header with following values:
        * **name:** elevenlabs-secret
        * **type:** secret
-       * **value:** select WEBHOOK_SECRET
-         * You can configure secrets in ElevenLabs by navigating to workspace configuration and settings.
-   * Configure **Body parameters**. Below you can find a **api_schema** that will allow to use **/v1/chat/completions** webhook endpoint
+       * **value:** select **WEBHOOK_SECRET**
+         * You can configure secret in ElevenLabs by navigating to workspace configuration and settings.
+   * Configure **Body parameters**. Below you can find a **api_schema** that will allow to use **/v1/chat/completions** webhook format endpoint
 
 
 **Webhook tool configuration in JSON (API schema)**
@@ -111,15 +111,15 @@ I this example we are using **/v1/chat/completions** endpoint format which is th
 
 ## Architecture components
 
-1. **API routing**
+**1. API routing**
 
-Built on top of FastAPI, this component manages the HTTP communication layer, authentication, and data serialization (between the Elevenlabs conversational agent and internal knowledge database).
+Built on top of FastAPI, this component manages the HTTP communication layer, authentication and data serialization (between the Elevenlabs conversational AI agent and internal knowledge database).
 
-2. **Knowledge retrieval & vector database**
+**2. Knowledge retrieval & vector database**
 
 This component manages the persistence, indexing, and contextual search of the documentation.
 
-3. **LLM orchestration**
+**3. LLM orchestration**
 
 This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
 

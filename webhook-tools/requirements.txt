@@ -1,0 +1,4 @@
+fastapi>=0.141.1
+ollama>=0.6.2
+chromadb>=1.5.9
+pyngrok>=8.1.2
