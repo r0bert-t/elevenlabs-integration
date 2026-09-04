@@ -57,11 +57,11 @@ I this example we are using **/v1/chat/completions** endpoint which is the stand
    * **Method:** `POST`
    * Set proper **Response timeout** (seconds)
    * Configure Authentication:
-   * Add header with following values:
-    * **name:** elevenlabs-secret
-    * **type:** secret
-    * **value:** select WEBHOOK_SECRET
-    * You can configure workspace secrets in ElevenLabs by navigating to your agent settings or workspace configuration and adding the secret key value
+     * Add header with following values:
+       * **name:** elevenlabs-secret
+       * **type:** secret
+       * **value:** select WEBHOOK_SECRET
+         * You can configure workspace secrets in ElevenLabs by navigating to your agent settings or workspace configuration and adding the secret key value
    * Configure **Body parameters**. Below you can find a **api_schema** that will allow to use **/v1/chat/completions** webhook endpoint
 
 
