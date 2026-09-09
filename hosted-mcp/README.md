@@ -9,12 +9,13 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 ## Technical Architecture
 
 - **Client-Server Model**: Claude acts as the MCP client, while custom connectors allows to connect Claude to existing remote MCP servers.
-- ElevenLabs platform exposes MCP server using a public endpoint reachable over the public Internet 
-```
-https://api.elevenlabs.io/v1/mcp
-```
-It acts as a developer-friendly local interface that forwards requests to ElevenLabs’ cloud APIs.
-- Authentication uses OAuth. It requires to sign in with your ElevenLabs account and grant the assistant scoped access to your workspace. There is no need to configure API keys. User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts
+- ElevenLabs platform exposes MCP server using a public endpoint reachable over the public Internet. It acts as a developer-friendly local interface that forwards requests to ElevenLabs’ cloud APIs.
+
+  **ElevenLabs MCP server endpoint**
+  ```
+  https://api.elevenlabs.io/v1/mcp
+  ```
+- Authentication uses OAuth. It requires to sign in with your ElevenLabs account and grant the assistant scoped access to your workspace. There is no need to configure API keys. User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts.
 
 ## Setup
 
@@ -73,7 +74,10 @@ Here is the source text or topic you need to rewrite into a voiceover script:
 2. Navigate to the **Instant Voice Cloning** page in **Voices**
 2. Upload your samples or record audio
 
->To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
+**Professional Voice Cloning**
+To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
+
+For differences between Instant Voice Cloning and Professional Voice Cloning you can check this [article](https://help.elevenlabs.io/hc/en-us/articles/13313681788305-What-is-the-difference-between-Instant-Voice-Cloning-and-Professional-Voice-Cloning)
 
 ### 3. Approve the tool call
 
