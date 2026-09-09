@@ -1,4 +1,4 @@
-# Claude using ElevenLabs hosted MCP
+# Claude using ElevenLabs hosted MCP server
 
 This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp) can expose agent management tools to AI assistants like Claude and help you prepare a YouTube voiceover by generating a draft script, analyzing the tone, selecting the best voice IDs from your account, and calling the ElevenLabs API to generate the audio files.
 
@@ -6,12 +6,20 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 ![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/hosted_mcp_server.png)
 
 
+# Technical Architecture
+
+- Client-Server Model: Claude acts as the MCP client, while custom connectors allows to connect Claude to existing remote MCP servers.
+- ElevenLabs exposes MCP server using a public endpoint reachable over the public Internet 
+```
+https://api.elevenlabs.io/v1/mcp
+```
+
 ## Setup
 
 ### 1. Configure Claude Desktop to use Elevenlabs MCP
 
 1. In Claude Desktop, navigate to to **Settings** > **Connectors** and browse the directory.
-2. Search for ElevenLabs and select **Connect**.
+2. Search for **ElevenLabs** and select **Connect**.
 3. Complete the OAuth flow with your ElevenLabs account. Choose the ElevenLabs workspace, review the requested permissions, and select Authorize.
 
 > Please note that Claude can only perform actions covered by the permissions you approve, and access is limited to the ElevenLabs workspace you sign in with.
