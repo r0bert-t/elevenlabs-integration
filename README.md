@@ -5,3 +5,4 @@ A collection of examples demonstrating applications of the ElevenLabs platform a
 ## Current examples
 
 - [Conversational AI agent with webhook tool](webhook-tools/README.md) — ElevenLabs conversational AI agent using local RAG and external knowledge database
+- [ElevenLabs MCP server integrated with Claude](hosted-mcp/README.md) — Use Claude and the ElevenLabs hosted MCP server to generate a YouTube voiceover
