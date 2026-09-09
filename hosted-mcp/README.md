@@ -3,7 +3,7 @@
 This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/docs/eleven-agents/operate/hosted-mcp) can expose agent management tools to AI assistants like Claude and help you prepare a YouTube voiceover by generating a draft script, analyzing the tone, selecting the best voice IDs from your account, and calling the ElevenLabs API to generate the audio files.
 
 
-![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/hosted_MCP_server.png)
+![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/hosted_mcp_server.png)
 
 
 ## Setup
