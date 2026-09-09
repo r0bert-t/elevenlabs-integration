@@ -13,7 +13,8 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 ```
 https://api.elevenlabs.io/v1/mcp
 ```
--  User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts
+It acts as a developer-friendly local interface that forwards requests to ElevenLabs’ cloud APIs.
+- Authentication uses OAuth. It requires to sign in with your ElevenLabs account and grant the assistant scoped access to your workspace. There is no need to configure API keys. User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts
 
 ## Setup
 
