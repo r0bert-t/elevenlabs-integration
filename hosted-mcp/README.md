@@ -76,7 +76,7 @@ Here is the source text or topic you need to rewrite into a voiceover script:
 
 - **Professional Voice Cloning**
 
-To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
+  To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
 
 >For differences between Instant Voice Cloning and Professional Voice Cloning you can check this [article](https://help.elevenlabs.io/hc/en-us/articles/13313681788305-What-is-the-difference-between-Instant-Voice-Cloning-and-Professional-Voice-Cloning)
 
