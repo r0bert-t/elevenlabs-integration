@@ -15,7 +15,7 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
   ```
   https://api.elevenlabs.io/v1/mcp
   ```
-- Authentication uses OAuth. It requires to sign in with your ElevenLabs account and grant the assistant scoped access to your workspace. There is no need to configure API keys. User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts.
+- Authentication leverages OAuth. It requires to sign in with ElevenLabs account and grant the assistant scoped access to workspace. What's important there is no need to configure API keys. User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts.
 
 ## Setup
 
@@ -68,17 +68,17 @@ Here is the source text or topic you need to rewrite into a voiceover script:
 ### Cloning your voice
 [ElevenCreative](https://elevenlabs.io/docs/eleven-creative/overview) can create a digital replica of your voice that you can deploy in 32+ languages while matching the emotional register and prosody of your natural language. ElevenLabs offers [Instant Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning) and [Professional Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning) services.
 
-**Instant Voice Cloning** (available in the Free tier)
-1. Login to ElevenLabs platform
-2. Switch to **ElevenCreative**
-2. Navigate to the **Instant Voice Cloning** page in **Voices**
-2. Upload your samples or record audio
+- **Instant Voice Cloning** (available in the Free tier)
+  - Login to ElevenLabs platform
+  - Switch to **ElevenCreative**
+  - Navigate to the **Instant Voice Cloning** page in **Voices**
+  - Upload your samples or record audio
 
-**Professional Voice Cloning**
+- **Professional Voice Cloning**
 
 To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
 
-For differences between Instant Voice Cloning and Professional Voice Cloning you can check this [article](https://help.elevenlabs.io/hc/en-us/articles/13313681788305-What-is-the-difference-between-Instant-Voice-Cloning-and-Professional-Voice-Cloning)
+>For differences between Instant Voice Cloning and Professional Voice Cloning you can check this [article](https://help.elevenlabs.io/hc/en-us/articles/13313681788305-What-is-the-difference-between-Instant-Voice-Cloning-and-Professional-Voice-Cloning)
 
 ### 3. Approve the tool call
 
