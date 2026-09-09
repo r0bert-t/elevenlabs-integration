@@ -25,7 +25,7 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 2. Search for **ElevenLabs** and select **Connect**.
 3. Complete the OAuth flow with your ElevenLabs account. Choose the ElevenLabs workspace, review the requested permissions, and select Authorize.
 
-> Please note that Claude can only perform actions covered by the permissions you approve, and access is limited to the ElevenLabs workspace you sign in with.
+> Please note that Claude can only perform actions covered by the permissions you approve and access is limited to the ElevenLabs workspace you sign in with.
 
 ### 2. Use proper prompt for Claude
 Paste one of the prompts above depending whether you want to use a generic Elevenlabs voices or your cloned voice.
@@ -66,7 +66,7 @@ Here is the source text or topic you need to rewrite into a voiceover script:
 ```
 
 ### Cloning your voice
-[ElevenCreative](https://elevenlabs.io/docs/eleven-creative/overview) can create a digital replica of your voice that you can deploy in 32+ languages while matching the emotional register and prosody of your natural language. ElevenLabs offers [Instant Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning) and [Professional Voice Cloning services](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning).
+[ElevenCreative](https://elevenlabs.io/docs/eleven-creative/overview) can create a digital replica of your voice that you can deploy in 32+ languages while matching the emotional register and prosody of your natural language. ElevenLabs offers [Instant Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning) and [Professional Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning) services.
 
 **Instant Voice Cloning** (available in the Free tier)
 1. Login to ElevenLabs platform
@@ -75,6 +75,7 @@ Here is the source text or topic you need to rewrite into a voiceover script:
 2. Upload your samples or record audio
 
 **Professional Voice Cloning**
+
 To use Professional Voice Cloning service you must be subscribed to the Creator plan or higher.
 
 For differences between Instant Voice Cloning and Professional Voice Cloning you can check this [article](https://help.elevenlabs.io/hc/en-us/articles/13313681788305-What-is-the-difference-between-Instant-Voice-Cloning-and-Professional-Voice-Cloning)
