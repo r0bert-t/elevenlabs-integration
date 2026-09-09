@@ -6,13 +6,14 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 ![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/hosted_mcp_server.png)
 
 
-# Technical Architecture
+## Technical Architecture
 
-- Client-Server Model: Claude acts as the MCP client, while custom connectors allows to connect Claude to existing remote MCP servers.
-- ElevenLabs exposes MCP server using a public endpoint reachable over the public Internet 
+- **Client-Server Model**: Claude acts as the MCP client, while custom connectors allows to connect Claude to existing remote MCP servers.
+- ElevenLabs platform exposes MCP server using a public endpoint reachable over the public Internet 
 ```
 https://api.elevenlabs.io/v1/mcp
 ```
+-  User authorize a connector so Claude will know which resources can access and which actions can dynamically invoke based on user prompts
 
 ## Setup
 
