@@ -19,11 +19,11 @@ Paste one of the prompts above depending whether you want to use a generic Eleve
 ```
 Act as an experienced YouTube scriptwriter and voiceover director.
 
-Here is the profile of my cloned voice:
+Here is the profile of my voice:
 - [Insert characteristics here, e.g., Male/Female, energetic, deep, calm, casual, fast-paced]
 - Language: English
 
-1. Write a highly engaging, conversational, 60-second YouTube Shorts/Video script about "PASTE YOUR RAW TEXT OR TOPIC HERE" 
+1. Write a highly engaging, conversational, [UPDATE WITH TIME DURATION]-second YouTube Shorts/Video script about "PASTE YOUR RAW TEXT OR TOPIC HERE" 
 2. Include visual cues in brackets, pacing instructions, and specify the exact emotional tone for the speaker.
 3. Review my available ElevenLabs voices via the MCP tool. Select a deep, cinematic, storytelling voice for this project.
 4. Use the ElevenLabs MCP tool to generate the final audio files for the script segments.
@@ -45,14 +45,13 @@ Strict Rules for ElevenLabs Text-to-Speech Optimization:
    - Use periods (.) to firmly end a thought before the next sentence.
 3. SPELL OUT NUMBERS & SYMBOLS: Write out all numbers, dates, abbreviations, and symbols phonetically (e.g., instead of "in 2026 for $50k at 5%", write "in twenty twenty-six for fifty thousand dollars at five percent"). This prevents the AI from mispronouncing or rushing through them.
 4. EMOTIONAL INFLECTION: Use question marks (?) and exclamation points (!) strategically to force the AI model to shift its vocal modulation, pitch, and intonation naturally.
-5. YOUTUBE RETENTION STYLE: Write in a highly engaging, conversational YouTube style. Use short sentences, active hooks, and rhetorical questions to keep the audience listening.
 
 Here is the source text or topic you need to rewrite into a voiceover script:
 [PASTE YOUR RAW TEXT OR TOPIC HERE]
 ```
 
 ### Cloning your voice
-[ElevenCreative](https://elevenlabs.io/docs/eleven-creative/overview) can create a digital replica of your voice that you can deploy in 32+ languages while matching the emotional register and prosody of your natural language. ElevenLabs offers [Instant Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning)** and [Professional Voice Cloning services](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning).
+[ElevenCreative](https://elevenlabs.io/docs/eleven-creative/overview) can create a digital replica of your voice that you can deploy in 32+ languages while matching the emotional register and prosody of your natural language. ElevenLabs offers [Instant Voice Cloning](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/instant-voice-cloning) and [Professional Voice Cloning services](https://elevenlabs.io/docs/eleven-creative/voices/voice-cloning/professional-voice-cloning).
 
 **Instant Voice Cloning** (available in the Free tier)
 1. Login to ElevenLabs platform
