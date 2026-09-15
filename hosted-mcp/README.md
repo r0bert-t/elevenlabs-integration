@@ -75,6 +75,9 @@ Here is the source text or topic you need to rewrite into a voiceover script:
   - Login to ElevenLabs platform
   - Switch to **ElevenCreative**
   - Navigate to the **Instant Voice Cloning** page in **Voices**
+
+![ElevenLabs IVC](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/elevenlabs_ivc.png)
+
   - Upload your samples or record audio
 
 - **Professional Voice Cloning**
