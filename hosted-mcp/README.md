@@ -24,7 +24,7 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 1. In Claude Desktop, navigate to to **Settings** > **Connectors** and browse the directory.
 2. Search for **ElevenLabs** and select **Connect**.
 
-![ElevenLabs Connector](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/claude_connector.jpg)
+![ElevenLabs Connector](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/claude_connector.png)
 
 3. Complete the OAuth flow with your ElevenLabs account. Choose the ElevenLabs workspace, review the requested permissions, and select Authorize.
 
