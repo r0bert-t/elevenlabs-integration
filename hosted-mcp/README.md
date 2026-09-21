@@ -30,6 +30,8 @@ This example shows how the [ElevenLabs hosted MCP server](https://elevenlabs.io/
 
 > Please note that Claude can only perform actions covered by the permissions you approve and access is limited to the ElevenLabs workspace you sign in with.
 
+![ElevenLabs Connector auth](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/claude_connector_auth.png)
+
 ### 2. Use proper prompt for Claude
 Paste one of the prompts above depending whether you want to use a generic Elevenlabs voices or your cloned voice.
 
@@ -75,10 +77,9 @@ Here is the source text or topic you need to rewrite into a voiceover script:
   - Login to ElevenLabs platform
   - Switch to **ElevenCreative**
   - Navigate to the **Instant Voice Cloning** page in **Voices**
+  - Upload your samples or record audio
 
 ![ElevenLabs IVC](https://github.com/r0bert-t/elevenlabs-integration/blob/main/hosted-mcp/elevenlabs_ivc.png)
-
-  - Upload your samples or record audio
 
 - **Professional Voice Cloning**
 
