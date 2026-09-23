@@ -5,6 +5,21 @@
   
 ![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/elevenlabs-webhook-tool_v2.png)
 
+## Architecture components
+
+**1. API routing**
+
+Built on top of FastAPI, this component manages the HTTP communication layer, authentication and data serialization (between the Elevenlabs conversational AI agent and internal knowledge database).
+
+**2. Knowledge retrieval & vector database**
+
+This component manages the persistence, indexing, and contextual search of the documentation.
+
+**3. LLM orchestration**
+
+This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
+
+
 ## Logic
 
 When a user asks a question requiring a specific knowledge, the ElevenLabs agent triggers a custom webhook tool. The local server processes the query using a local LLM, searches the vector database, extracts the relevant context, and returns it to the agent instantly to form a natural voice response.
@@ -136,21 +151,6 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-## Architecture components
-
-**1. API routing**
-
-Built on top of FastAPI, this component manages the HTTP communication layer, authentication and data serialization (between the Elevenlabs conversational AI agent and internal knowledge database).
-
-**2. Knowledge retrieval & vector database**
-
-This component manages the persistence, indexing, and contextual search of the documentation.
-
-**3. LLM orchestration**
-
-This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
-
 
 ---
 
