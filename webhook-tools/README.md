@@ -7,15 +7,15 @@
 
 ## Architecture components
 
-**1. API routing**
+**API gateway (API routing)**
 
 Built on top of FastAPI, this component manages the HTTP communication layer, authentication and data serialization (between the Elevenlabs conversational AI agent and internal knowledge database).
 
-**2. Knowledge retrieval & vector database**
+**Knowledge retrieval & vector database**
 
 This component manages the persistence, indexing, and contextual search of the documentation.
 
-**3. LLM orchestration**
+**LLM orchestration**
 
 This component manages prompt handling and processing queries. It interacts with local Ollama and LLM model.
 
