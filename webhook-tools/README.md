@@ -7,7 +7,7 @@
 
 ## Architecture components
 
-**API gateway (API routing)**
+**API gateway**
 
 Built on top of FastAPI, this component manages the HTTP communication layer, authentication and data serialization (between the Elevenlabs conversational AI agent and internal knowledge database).
 
@@ -38,7 +38,7 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 4. **Delivery:** The structured text answer is stream back in chunks to ElevenLabs agent to be spoken to the user
 
 
-## Example of webhook queries sent to Local Server Gateway
+## Example of webhook tool queries
 
 In the following example, the ElevenLabs agent triggers a custom webhook tool to send two queries to a local server. After successful authentication, the local server retrieves the relevant context and returns it to the agent.
 
