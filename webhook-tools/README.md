@@ -38,6 +38,10 @@ When a user asks a question requiring a specific knowledge, the ElevenLabs agent
 4. **Delivery:** The structured text answer is stream back in chunks to ElevenLabs agent to be spoken to the user
 
 
+## Sample webhook logs (Local Server Gateway)
+
+![Webhook logs](https://github.com/r0bert-t/elevenlabs-integration/blob/main/webhook-tools/webhook_logs.png)
+
 ## Setup
 
 ### 1. Set up local server webhook endpoint
