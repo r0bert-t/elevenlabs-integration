@@ -6,7 +6,7 @@ This example shows how to connect an existing OpenAI Realtime client to ElevenLa
 
 ## Architecture components
 
-**OpenAI’s Realtime SDK client (main.js)**
+**OpenAI’s Realtime SDK client ([main.js](main.js))**
 
 It creates a RealtimeAgent and RealtimeSession (OpenAI Agents SDK) with a WebSocket transport pointed at ElevenLabs, then connects with the secret retrieved from Flask server.
 
@@ -15,7 +15,7 @@ It creates a RealtimeAgent and RealtimeSession (OpenAI Agents SDK) with a WebSoc
 It is a local development server designed to build and serve frontend code. It serves web page with UI and bundles main.js with its npm dependencies (@openai/agents-realtime, wavtools).
 It also acts as a proxy and forwards any request starting with /api to Flask, so the browser sees one origin and no CORS setup is needed.
 
-**Flask server (PORT 3000)**
+**Flask server (port 3000)**
 
 This component manages client secret retrieval. It requests ElevenLabs to mint a client secret using a fixed session config (model, voice, instructions, audio format, turn detection) and a 10-minute lifetime.
 
@@ -23,7 +23,7 @@ This component manages client secret retrieval. It requests ElevenLabs to mint a
 
 It authenticates the request from Flask server using ElevenLabs API key in the xi-api-key header and creates a client secret, which is a short-lived credential tied to the session configuration.
 
-**ElevenLabs Realtime API (WebSocket endpoint)**
+**ElevenLabs Realtime API (WebSocket endpoint [wss://api.elevenlabs.io/v1/convai/realtime](wss://api.elevenlabs.io/v1/convai/realtime))**
 
 It accepts the browser’s WebSocket connection and checks the client secret. It is using the OpenAI Realtime protocol: JSON events carrying base64-encoded PCM16 audio.
 It runs the conversation: detects when you’ve finished speaking, generates the agent’s reply, and streams it back as audio chunks plus transcript events and response lifecycle events (response.created, response.done). It sends interruption events when it hears speech during the agent’s answer
@@ -32,7 +32,7 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 
 1. Local server requests a short-lived client secret from ElevenLabs, scoped to a specific session configuration.
 2. Client secret is passed to OpenAI’s Realtime SDK in place of an OpenAI API key.
-3. The SDK connects over WebSocket to ElevenLabs Realtime, and the conversation proceeds using the same client and server events as OpenAI’s Realtime API.
+3. The OpenAI’s Realtime SDK connects over WebSocket to ElevenLabs Realtime API, and the conversation proceeds using the same client and server events as OpenAI’s Realtime API.
 
 ## Client secret retrieval
 
@@ -43,7 +43,7 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 
 ## Connection from browser to ElevenLabs Realtime API
 
-main.js opens a WebSocket to ElevenLabs Realtime endpoint wss://api.elevenlabs.io/v1/convai/realtime and authenticates with the client short-lived secret. 
+main.js opens a WebSocket to ElevenLabs Realtime endpoint [wss://api.elevenlabs.io/v1/convai/realtime](wss://api.elevenlabs.io/v1/convai/realtime) and authenticates with the client short-lived secret. 
 It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
 
 
