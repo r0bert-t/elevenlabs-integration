@@ -23,7 +23,7 @@ This component manages client secret retrieval. It requests ElevenLabs to mint a
 
 It authenticates the request from Flask server using ElevenLabs API key in the xi-api-key header and creates a client secret, which is a short-lived credential tied to the session configuration.
 
-**ElevenLabs Realtime API (WebSocket endpoint [wss://api.elevenlabs.io/v1/convai/realtime](wss://api.elevenlabs.io/v1/convai/realtime))**
+**ElevenLabs Realtime API (WebSocket endpoint)**
 
 It accepts the browser’s WebSocket connection and checks the client secret. It is using the OpenAI Realtime protocol: JSON events carrying base64-encoded PCM16 audio.
 It runs the conversation: detects when you’ve finished speaking, generates the agent’s reply, and streams it back as audio chunks plus transcript events and response lifecycle events (response.created, response.done). It sends interruption events when it hears speech during the agent’s answer
@@ -43,7 +43,7 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 
 ## Connection from browser to ElevenLabs Realtime API
 
-main.js opens a WebSocket to ElevenLabs Realtime endpoint [wss://api.elevenlabs.io/v1/convai/realtime](wss://api.elevenlabs.io/v1/convai/realtime) and authenticates with the client short-lived secret. 
+main.js opens a WebSocket to ElevenLabs Realtime endpoint wss://api.elevenlabs.io/v1/convai/realtime and authenticates with the client short-lived secret. 
 It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
 
 
