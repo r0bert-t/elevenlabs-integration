@@ -46,7 +46,40 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 main.js opens a WebSocket to ElevenLabs Realtime endpoint wss://api.elevenlabs.io/v1/convai/realtime and authenticates with the client short-lived secret. 
 It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
 
+## Setup
 
+
+```bash
+# Create virtual environment
+python3.12 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# Install Vite, Wavtools and OpenAI Agents SDK  
+npm init -y 
+npm install vite wavtools @openai/agents-realtime 
+
+# Update server.py and add your ElevenLabs API key. 
+# You can generate API key at ElevenLabs Platform https://elevenlabs.io/app/settings/api-keys
+ELEVENLABS_API_KEY=<KEY>
+
+# Run local Flask server
+python server.py
+
+# Check if Flask server is able to establish connection to ElevenLabs platform and retrieve client secret
+curl -i -X POST http://localhost:3000/api/token
+
+# Run Vite server
+npx vite
+
+# Open browser and type following address
+http://localhost:5173
+```
+
+## References
+[1] [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility#are-realtime-models-fused-models)
+[2] [OpenAI’s Realtime agents SDK](https://openai.github.io/openai-agents-python/ref/realtime/agent/)
 ---
+
 
 Created by [Robert Tracz](https://www.linkedin.com/in/robert-tracz/) 
