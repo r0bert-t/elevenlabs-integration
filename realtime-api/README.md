@@ -50,6 +50,10 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 main.js opens a WebSocket to ElevenLabs Realtime endpoint wss://api.elevenlabs.io/v1/convai/realtime and authenticates with the client short-lived secret. 
 It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
 
+## Web interface
+
+![UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_ui.png)
+
 ## Setup
 
 
