@@ -31,6 +31,10 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 ## Logic
 
 1. Local server requests a short-lived client secret from ElevenLabs, scoped to a specific session configuration.
+  - model: eleven_realtime_v1_mini
+  - instruction: "You are a helpful, friendly voice assistant. Keep replies concise."
+  - audio format: PCM16 audio with rate 24kHz
+  - voice: "brian"
 2. Client secret is passed to OpenAI’s Realtime SDK in place of an OpenAI API key.
 3. The OpenAI’s Realtime SDK connects over WebSocket to ElevenLabs Realtime API, and the conversation proceeds using the same client and server events as OpenAI’s Realtime API.
 
@@ -77,7 +81,7 @@ http://localhost:5173
 ```
 
 ## References
-- [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility#are-realtime-models-fused-models)
+- [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility)
 - [OpenAI’s Realtime agents SDK](https://openai.github.io/openai-agents-python/ref/realtime/agent/)
 
 
