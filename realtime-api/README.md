@@ -36,6 +36,8 @@ wss://api.elevenlabs.io/v1/convai/realtime
 ## Logic
 
 1. Local server requests a short-lived client secret from ElevenLabs, scoped to a specific session configuration.
+
+Session parameters:
   - model: eleven_realtime_v1_mini
   - instruction: "You are a helpful, friendly voice assistant. Keep replies concise."
   - audio format: PCM16 audio with rate 24kHz
@@ -56,7 +58,7 @@ main.js opens a WebSocket to ElevenLabs Realtime endpoint and authenticates with
 
 ## Web interface
 
-![UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_ui.png)
+![Web UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_ui.png)
 
 ## Setup
 
