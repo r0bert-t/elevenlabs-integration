@@ -77,9 +77,9 @@ http://localhost:5173
 ```
 
 ## References
-[1] [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility#are-realtime-models-fused-models)
-[2] [OpenAI’s Realtime agents SDK](https://openai.github.io/openai-agents-python/ref/realtime/agent/)
+- [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility#are-realtime-models-fused-models)
+- [OpenAI’s Realtime agents SDK](https://openai.github.io/openai-agents-python/ref/realtime/agent/)
+
+
 ---
-
-
 Created by [Robert Tracz](https://www.linkedin.com/in/robert-tracz/) 
