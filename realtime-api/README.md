@@ -37,7 +37,7 @@ wss://api.elevenlabs.io/v1/convai/realtime
 
 1. Local server requests a short-lived client secret from ElevenLabs, scoped to a specific session configuration.
 
-Session parameters:
+  Session parameters:
   - model: eleven_realtime_v1_mini
   - instruction: "You are a helpful, friendly voice assistant. Keep replies concise."
   - audio format: PCM16 audio with rate 24kHz
