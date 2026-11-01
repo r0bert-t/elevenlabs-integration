@@ -15,7 +15,7 @@ It creates a RealtimeAgent and RealtimeSession (OpenAI Agents SDK) with a WebSoc
 It is a local development server designed to build and serve frontend code. It serves web page with UI and bundles main.js with its npm dependencies (@openai/agents-realtime, wavtools).
 It also acts as a proxy and forwards any request starting with /api to Flask, so the browser sees one origin and no CORS setup is needed.
 
-**Flask server (port 3000)**
+**Flask server (port 3000) ([server.py](server.py))**
 
 This component manages client secret retrieval. It requests ElevenLabs to mint a client secret using a fixed session config (model, voice, instructions, audio format, turn detection) and a 10-minute lifetime.
 
@@ -27,6 +27,11 @@ It authenticates the request from Flask server using ElevenLabs API key in the x
 
 It accepts the browser’s WebSocket connection and checks the client secret. It is using the OpenAI Realtime protocol: JSON events carrying base64-encoded PCM16 audio.
 It runs the conversation: detects when you’ve finished speaking, generates the agent’s reply, and streams it back as audio chunks plus transcript events and response lifecycle events (response.created, response.done). It sends interruption events when it hears speech during the agent’s answer
+
+**ElevenLabs Realtime WebSocket endpoint**
+```
+wss://api.elevenlabs.io/v1/convai/realtime
+```
 
 ## Logic
 
@@ -47,8 +52,7 @@ It runs the conversation: detects when you’ve finished speaking, generates the
 
 ## Connection from browser to ElevenLabs Realtime API
 
-main.js opens a WebSocket to ElevenLabs Realtime endpoint wss://api.elevenlabs.io/v1/convai/realtime and authenticates with the client short-lived secret. 
-It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
+main.js opens a WebSocket to ElevenLabs Realtime endpoint and authenticates with the client short-lived secret. It uses the OpenAI Realtime wire protocol: JSON events, with audio carried as base64-encoded PCM16 at 24 kHz.
 
 ## Web interface
 
