@@ -1,5 +1,7 @@
 # ElevenLabs integration examples
 
+![ElevenLabs integration examples](figures/elevenlabs-integration-examples.svg)
+
 A collection of examples demonstrating applications of the ElevenLabs platform and how AI voice technology can be applied to real human problems — covering text-to-speech, speech-to-text, speech-to-speech, voice cloning and conversational AI use cases.
 
 ## Current examples
