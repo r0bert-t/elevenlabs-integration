@@ -83,8 +83,16 @@ python server.py
 # Check if Flask server is able to establish connection to ElevenLabs platform and retrieve client secret
 curl -i -X POST http://localhost:3000/api/token
 
-# Run Vite server
 # Make sure you have a proper server proxy configuration in vite.config.js file
+export default {
+  server: {
+    proxy: {
+      "/api": { target: "http://127.0.0.1:3000", changeOrigin: true },
+    },
+  },
+};
+
+# Run Vite server
 npx vite
 
 # Open browser and type following address
