@@ -84,6 +84,7 @@ python server.py
 curl -i -X POST http://localhost:3000/api/token
 
 # Run Vite server
+# Make sure you have a proper server proxy configuration in vite.config.js file
 npx vite
 
 # Open browser and type following address
