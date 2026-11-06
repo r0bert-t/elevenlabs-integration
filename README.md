@@ -7,4 +7,4 @@ A collection of examples demonstrating applications of the ElevenLabs platform a
 - [Conversational AI agent with webhook tool](webhook-tools/README.md) — ElevenLabs conversational AI agent using local RAG and external knowledge database
 - [ElevenLabs MCP server integrated with Claude](hosted-mcp/README.md) — Generate a high-quality YouTube voiceover by integrating Claude with the ElevenLabs hosted MCP server
 - [Personal Voice RAG using ElevenlabsAPI](https://github.com/r0bert-t/personal-voice-rag) — Voice RAG leveraging Speech to Text (STT) and Text-to-Speech (TTS) APIs
-- [Connecting OpenAI realtime client to ElevenLabs Realtime](realtime-api/README.md) — Example of Speech-to-Speech conversational voice agent using OpenAI Realtime API
+- ![NEW](https://img.shields.io/badge/NEW-black) [Connecting OpenAI realtime client to ElevenLabs Realtime](realtime-api/README.md) — Example of Speech-to-Speech conversational voice agent using OpenAI Realtime API
