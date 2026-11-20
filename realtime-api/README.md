@@ -115,6 +115,8 @@ Script measures following values:
 - **Average**: the mean of each stage plus the mean output latency
 - **Server detection of speech start**: the average time between first loud chunk and the server’s **speech_started event**. It is a rough indicator of network round trip plus voice detection.
 
+![Timeline](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_timeline.png)
+
 ![Latency stats](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_stats_1.png)
 
 
