@@ -101,6 +101,22 @@ npx vite
 # Open browser and type following address
 http://localhost:5173
 ```
+## Latency results
+
+Below are presented the results from sample conversation with Realtime agent.
+
+Bars represents different stages:
+- End-of-speech detection (purple): from last loud mic chunk to the server’s **speech_stopped** event. This is the server’s silence timeout plus network time.
+- Response start (green): from **speech_stopped** to the server’s **response.created** event.
+- Generation to 1st audio (amber): from **response.created** to the first audio chunk arriving in the browser. This is mainly model and speech-synthesis time.
+
+Script measures following values:
+- **Turns, last, median, p95 and min–max**: all based on the dot value. The p95 is the value that 95% of turns stay under.
+- **Average**: the mean of each stage plus the mean output latency
+- **Server detection of speech start**: the average time between first loud chunk and the server’s **speech_started event**. It is a rough indicator of network round trip plus voice detection.
+
+![Latency stats](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_stats_1.png)
+
 
 ## References
 - [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility)
