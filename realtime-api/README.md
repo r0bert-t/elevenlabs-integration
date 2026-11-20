@@ -58,12 +58,12 @@ main.js opens a WebSocket to ElevenLabs Realtime endpoint and authenticates with
 
 ## Web interface
 
-After you successfully complete the setup, you can access the conversational voice agent by opening a web browser and navigating to agent console http://localhost:5173.
+After you successfully complete the setup, you can access the realtime voice agent by opening a web browser and navigating to agent console http://localhost:5173.
 
-Click 'Connect' button and start you conversation with an agent using a speech.
+Once you click 'Connect' agent will try to retrieve the short-lived client secret from ElevenLabs platform and establish Realtime session.
 ![Web UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/realtime_agent_ui_2.png)
 
-Once you click 'Connect' agent will retrieve the short-lived client secret from ElevenLabs platform and try to establish Realtime session.
+When the status will show 'Connected' you can start your conversation with agent using a speech.
 
 ![Web UI 2](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/realtime_agent_ui_3.png)
 
