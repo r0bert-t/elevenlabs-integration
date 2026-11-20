@@ -2,7 +2,7 @@
 
 This example shows how to connect an existing OpenAI Realtime client to ElevenLabs Realtime by changing the endpoint and session configuration.
   
-![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/elevenlabs_realtime_v1.png)
+![System architecture](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/elevenlabs_realtime_v1.png)
 
 ## Architecture components
 
@@ -61,7 +61,7 @@ main.js opens a WebSocket to ElevenLabs Realtime endpoint and authenticates with
 Once you successfully complete setup, you can access the conversational voice agent by opening a web browser and navigating to agent console http://localhost:5173.
 Click 'Connect' button and start you conversation with an agent using a speech.
 
-![Web UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_ui.png)
+![Web UI](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/realtime_agent_ui.png)
 
 ## Setup
 
@@ -115,9 +115,9 @@ Script measures following values:
 - **Average**: the mean of each stage plus the mean output latency
 - **Server detection of speech start**: the average time between first loud chunk and the server’s **speech_started event**. It is a rough indicator of network round trip plus voice detection.
 
-![Timeline](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_timeline.png)
+![Timeline](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/realtime_agent_timeline.png)
 
-![Latency stats](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/realtime_agent_stats_1.png)
+![Latency stats](https://github.com/r0bert-t/elevenlabs-integration/blob/main/realtime-api/figures/realtime_agent_stats_1.png)
 
 
 ## References
