@@ -105,9 +105,9 @@ npx vite
 # Open browser and type following address
 http://localhost:5173
 ```
-## Latency results
+## Evaluation
 
-Below are presented the results from sample conversation with Realtime agent.
+Below are presented the results from sample conversation using a Realtime agent and Eleven Realtime v1 Mini model.
 
 Bars represents different stages:
 - End-of-speech detection (purple): from last loud mic chunk to the server’s **speech_stopped** event. This is the server’s silence timeout plus network time.
@@ -125,7 +125,7 @@ Script measures following values:
 
 
 ## References
-- [OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility)
+- [Elevenlabs - OpenAI Realtime API compatibility](https://elevenlabs.io/docs/eleven-agents/guides/openai-realtime-compatibility)
 - [OpenAI’s Realtime agents SDK](https://openai.github.io/openai-agents-python/ref/realtime/agent/)
 
 
